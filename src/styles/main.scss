@@ -1,13 +1,14 @@
-@import
-  "normalize",
-  "fonts",
-  "variables",
-  "mixins",
-  "globals",
-  "layout/container",
-  "components/main",
-  "utilities",
-  "media";
+@use 'reset';
+@use 'base';
+@use 'modern';
+@use 'fonts';
+@use 'mixins' as mix;
+@use 'globals';
+@use 'layout/container';
+@use 'components/main';
+@use 'utilities';
+@use 'media';
+
 
 
 

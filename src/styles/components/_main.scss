@@ -1,3 +1,5 @@
+@use '../variables' as vars;
+
 .main {
   &__container {
     border: 1px solid #ffffff;
@@ -5,5 +7,7 @@
 
   &__inner {
     text-align: center;
+    color: vars.$primary-color;
   }
 }
+
