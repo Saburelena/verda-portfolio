@@ -1,3 +1,225 @@
-$primary-color: #007bff;
+/* БАЗОВЫЕ ЦВЕТА */
+$color-white: #FFFFFF;
+$color-dark-gray: #292B32;
+$color-green: #39AA5D;
 
+/* ДОПОЛНИТЕЛЬНЫЕ ЦВЕТА */
+$color-light-gray: #DFE3E8;               // фон неактивных control кнопок
+$color-light-gray-secondary: #D2D8DE;     // фон кнопок с акцией
+$color-gray-text: #8C9AAC;                // зачеркнутая цена
+$color-border-alpha: #0B203F1A;           // прозрачная рамка (hex с alpha)
+
+/* СЕКЦИЯ */
+$section-padding-y: 60px;
+
+/* КОНТЕЙНЕР */
+$container-width: 1200px;
+$container-padding-x: 20px;
+
+/* ШРИФТ */
+$font-family-basic: 'CoFo Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-weight-regular: 400;    // обычный текст
+$font-weight-medium: 500;     // заголовки, кнопки
+
+/* КНОПКИ общие размеры */
+$button-height-cta: 46px;        // Call-to-action кнопки
+$button-height-control: 36px;    // Элементы управления
+
+/* CTA кнопки */
+$button-cta-cart-background: $color-green;            // фон Cart
+$button-cta-cart-text-color: $color-white;            // текст Cart
+
+$button-cta-shop-background: $color-white;            // фон Shop Now
+$button-cta-shop-text-color: $color-dark-gray;        // текст Shop Now
+$button-cta-shop-border-color: transparent;           // рамка Shop Now
+
+$button-cta-signin-background: transparent;           // фон Sign In (прозрачный)
+$button-cta-signin-text-color: $color-dark-gray;      // текст Sign In
+$button-cta-signin-border-color: $color-border-alpha; // рамка Sign In
+$button-cta-signin-border-width: 1px;                 // толщина рамки
+
+/* HOVER: CTA кнопки */
+$button-cta-cart-hover-background: #268644;
+$button-cta-cart-hover-text-color: $color-white;
+
+$button-cta-shop-hover-background: #D2D8DE;
+$button-cta-shop-hover-text-color: $color-dark-gray;
+$button-cta-shop-hover-border-color: transparent;
+
+$button-cta-signin-hover-background: rgba(255, 255, 255, 0.6);
+$button-cta-signin-hover-text-color: $color-dark-gray;
+$button-cta-signin-hover-border-color: $color-border-alpha;
+
+/* CONTROL кнопки (количество товара в цене) */
+$button-control-background: $color-light-gray;        // фон неактивной
+$button-control-text-color: $color-dark-gray;         // текст неактивной
+
+$button-control-active-background: $color-green;      // фон активной (выбран товар)
+$button-control-active-text-color: $color-white;      // текст активной
+
+/* HOVER: CONTROL кнопки (количество товара в цене) */
+$button-control-hover-background: #282A30;
+$button-control-hover-text-color: #FFFFFF;
+
+$button-control-active-hover-background: #268644;
+$button-control-active-hover-text-color: $color-white;
+
+/* Кнопки с акцией (со скидкой) */
+$button-sale-background: $color-light-gray-secondary;    // фон
+$button-sale-text-color: $color-dark-gray;               // обычная цена
+$button-sale-text-color-old: $color-gray-text;           // зачеркнутая цена
+$button-sale-text-decoration: line-through;              // перечеркивание
+
+$button-sale-active-background: $color-green;                   // фон активной со скидкой (выбран товар)
+$button-sale-active-text-color: $color-white;                   // текст активной
+
+/* HOVER: SALE КНОПКИ */
+$button-sale-hover-background: #282A30;
+$button-sale-hover-text-color: #FFFFFF;
+$button-sale-hover-text-color-old: rgba(255, 255, 255, 0.7);
+
+$button-sale-active-hover-background: #268644;
+$button-sale-active-hover-text-color: $color-white;
+$button-sale-active-hover-text-color-old: rgba(255, 255, 255, 0.7);
+
+/* Общие настройки фокуса для кнопок*/
+$focus-outline-width: 2px;
+$focus-outline-offset: 2px;
+
+/* Цвета фокуса для разных типов кнопок */
+$focus-outline-color-primary: rgba(57, 170, 93, 0.4);   // зеленый с прозрачностью
+$focus-outline-color-secondary: rgba(41, 43, 50, 0.3);  // серый с прозрачностью
+$focus-outline-color-light: rgba(255, 255, 255, 0.6);   // белый с прозрачностью
+
+/* Дополнительно: box-shadow для более красивого фокуса */
+$focus-shadow-primary: 0 0 0 3px rgba(57, 170, 93, 0.3);
+$focus-shadow-secondary: 0 0 0 3px rgba(41, 43, 50, 0.2);
+$focus-shadow-light: 0 0 0 2px rgba(255, 255, 255, 0.4);
+
+/* ЗАКРУГЛЕНИЯ Border Radius */
+$border-radius-small: 4px;           // мелкие элементы
+$border-radius-medium: 8px;          // средние элементы
+$border-radius-large: 12px;          // основные/крупные элементы
+
+/* ДЛИТЕЛЬНОСТИ */
+$transition-duration: 0.2s;
+$transition-timing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* ЦВЕТА ДЛЯ HEADER */
+$header-background: #F2F5F8CC;                    // фон шапки с прозрачностью
+$logo-color: $color-dark-gray;                    // цвет логотипа
+$menu-text-color: $color-dark-gray;               // текст меню
+$register-button-text-color: $color-dark-gray;    // текст кнопки "Sign in"
+$cart-button-background: $color-green;            // фон кнопки корзины
+$cart-button-text-color: $color-white;            // текст на кнопке корзины
+
+
+:root {
+  /* Общие */
+  --color-white: #{$color-white};
+  --color-dark-gray: #{$color-dark-gray};
+  --color-green: #{$color-green};
+  --color-light-gray: #{$color-light-gray};
+  --color-light-gray-secondary: #{$color-light-gray-secondary};
+  --color-gray-text: #{$color-gray-text};
+  --color-border-alpha: #{$color-border-alpha};
+
+  /* Секция */
+  --section-padding-y: #{$section-padding-y};
+
+  /* Контейнер */
+  --container-width: #{$container-width};
+  --container-padding-x: #{$container-padding-x};
+
+  /* Шрифт */
+  --font-family-basic: #{$font-family-basic};
+  --font-weight-regular: #{$font-weight-regular};
+  --font-weight-medium: #{$font-weight-medium};
+
+  /* кнопки */
+  --button-height-cta: #{$button-height-cta};
+  --button-height-control: #{$button-height-control};
+
+  /* CTA кнопки */
+  --button-cta-cart-background: #{$button-cta-cart-background};
+  --button-cta-cart-text-color: #{$button-cta-cart-text-color};
+
+  --button-cta-shop-background: #{$button-cta-shop-background};
+  --button-cta-shop-text-color: #{$button-cta-shop-text-color};
+  --button-cta-shop-border-color: #{$button-cta-shop-border-color};
+
+  --button-cta-signin-background: #{$button-cta-signin-background};
+  --button-cta-signin-text-color: #{$button-cta-signin-text-color};
+  --button-cta-signin-border-color: #{$button-cta-signin-border-color};
+  --button-cta-signin-border-width: #{$button-cta-signin-border-width};
+
+  /* Hover: CTA кнопки */
+  --button-cta-cart-hover-background: #{$button-cta-cart-hover-background};
+  --button-cta-cart-hover-text-color: #{$button-cta-cart-hover-text-color};
+
+  --button-cta-shop-hover-background: #{$button-cta-shop-hover-background};
+  --button-cta-shop-hover-text-color: #{$button-cta-shop-hover-text-color};
+  --button-cta-shop-hover-border-color: #{$button-cta-shop-hover-border-color};
+
+  --button-cta-signin-hover-background: #{$button-cta-signin-hover-background};
+  --button-cta-signin-hover-text-color: #{$button-cta-signin-hover-text-color};
+  --button-cta-signin-hover-border-color: #{$button-cta-signin-hover-border-color};
+
+  /* CONTROL кнопки */
+  --button-control-background: #{$button-control-background};
+  --button-control-text-color: #{$button-control-text-color};
+  --button-control-active-background: #{$button-control-active-background};
+  --button-control-active-text-color: #{$button-control-active-text-color};
+
+  /* Hover: Control кнопки */
+  --button-control-hover-background: #{$button-control-hover-background};
+  --button-control-hover-text-color: #{$button-control-hover-text-color};
+
+  --button-control-active-hover-background: #{$button-control-active-hover-background};
+  --button-control-active-hover-text-color: #{$button-control-active-hover-text-color};
+
+  /* Кнопки с акцией */
+  --button-sale-background: #{$button-sale-background};
+  --button-sale-text-color: #{$button-sale-text-color};
+  --button-sale-text-color-old: #{$button-sale-text-color-old};
+  --button-sale-text-decoration: #{$button-sale-text-decoration};
+  --button-sale-active-background: #{$button-sale-active-background};
+  --button-sale-active-text-color: #{$button-sale-active-text-color};
+
+  /* Hover: Кнопки с акцией */
+  --button-sale-hover-background: #{$button-sale-hover-background};
+  --button-sale-hover-text-color: #{$button-sale-hover-text-color};
+  --button-sale-hover-text-color-old: #{$button-sale-hover-text-color-old};
+
+  --button-sale-active-hover-background: #{$button-sale-active-hover-background};
+  --button-sale-active-hover-text-color: #{$button-sale-active-hover-text-color};
+  --button-sale-active-hover-text-color-old: #{$button-sale-active-hover-text-color-old};
+
+  /* Focus для кнопок */
+  --focus-outline-width: #{$focus-outline-width};
+  --focus-outline-offset: #{$focus-outline-offset};
+  --focus-outline-color-primary: #{$focus-outline-color-primary};
+  --focus-outline-color-secondary: #{$focus-outline-color-secondary};
+  --focus-outline-color-light: #{$focus-outline-color-light};
+  --focus-shadow-primary: #{$focus-shadow-primary};
+  --focus-shadow-secondary: #{$focus-shadow-secondary};
+  --focus-shadow-light: #{$focus-shadow-light};
+
+  /* Border Radius */
+  --border-radius-small: #{$border-radius-small};
+  --border-radius-medium: #{$border-radius-medium};
+  --border-radius-large: #{$border-radius-large};
+
+  /* Длительности */
+  --transition-duration: #{$transition-duration};
+  --transition-timing-standard: #{$transition-timing-standard};
+
+  /* Header */
+  --header-background: #{$header-background};
+  --logo-color: #{$logo-color};
+  --menu-text-color: #{$menu-text-color};
+  --register-button-text-color: #{$register-button-text-color};
+  --cart-button-background: #{$cart-button-background};
+  --cart-button-text-color: #{$cart-button-text-color};
+}
 
