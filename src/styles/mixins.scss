@@ -1,0 +1,86 @@
+/* ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ */
+@use "sass:math";
+
+@function strip-unit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+/* УНИВЕРСАЛЬНЫЙ FLUID МИКСИН */
+@mixin fluid(
+  $property,
+  $min-size: 16px,
+  $max-size: 32px,
+  $min-viewport: 375px,
+  $max-viewport: 1920px
+) {
+  #{$property}: clamp(
+          #{$min-size},
+          calc(#{$min-size} + (#{strip-unit($max-size)} - #{strip-unit($min-size)}) * ((100vw - #{$min-viewport}) / (#{strip-unit($max-viewport)} - #{strip-unit($min-viewport)}))),
+          #{$max-size}
+  );
+}
+
+/* УДОБНЫЕ ОБЕРТКИ */
+@mixin fluid-text($min-size, $max-size, $min-viewport: 375px, $max-viewport: 1920px) {
+  @include fluid(font-size, $min-size, $max-size, $min-viewport, $max-viewport);
+}
+
+@mixin fluid-margin-bottom($min-size, $max-size, $min-viewport: 375px, $max-viewport: 1920px) {
+  @include fluid(margin-bottom, $min-size, $max-size, $min-viewport, $max-viewport);
+}
+
+/* БАЗОВЫЕ МИКСИНЫ */
+@mixin reset-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+@mixin flex-center($is-inline: false) {
+  @if $is-inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

@@ -1,4 +1,101 @@
-body {
-  background-color: #000000;
-  color: white;
+@use 'sass:color';
+@use 'variables' as variables;
+@use 'mixins' as mixins;
+
+
+/* БАЗОВАЯ FLUID ТИПОГРАФИКА */
+html {
+  // Основной размер шрифта для всего документа
+  @include mixins.fluid-text(
+                  variables.$font-size-min,     // 20px
+                  variables.$font-size-max,     // 22px
+                  variables.$mobile,            // 360px
+                  variables.$full-hd            // 1920px
+  );
 }
+
+body {
+  font-family: variables.$font-family-basic;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$color-dark-gray;
+  background-color: variables.$color-white;
+}
+
+/* FLUID ЗАГОЛОВКИ */
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  font-weight: variables.$font-weight-medium;
+}
+
+h1, .h1 {
+  @include mixins.fluid-text(
+                  variables.$heading1-min,      // 48px
+                  variables.$heading1-max,      // 70px
+                  variables.$mobile,
+                  variables.$full-hd
+  );
+}
+
+h2, .h2 {
+  @include mixins.fluid-text(
+                  variables.$heading2-min,      // 36px
+                  variables.$heading2-max,      // 50px
+                  variables.$mobile,
+                  variables.$full-hd
+  );
+}
+
+h3, .h3 {
+  @include mixins.fluid-text(
+                  variables.$heading3-min,      // 28px
+                  variables.$heading3-max,      // 32px
+                  variables.$mobile,
+                  variables.$full-hd
+  );
+}
+
+h4, .h4 {
+  @include mixins.fluid-text(
+                  variables.$heading4-min,      // 24px
+                  variables.$heading4-max,      // 28px
+                  variables.$mobile,
+                  variables.$full-hd
+  );
+}
+
+
+/* БАЗОВЫЕ СТИЛИ ТЕКСТА */
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.small-text {
+  @include mixins.fluid-text(14px, 16px, variables.$mobile, variables.$full-hd);
+
+  line-height: 1.4;
+}
+
+
+/* ССЫЛКИ */
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition: variables.$transition-duration variables.$transition-timing-standard;
+}
+
+a {
+  color: variables.$color-green;
+  text-decoration: none;
+
+  &:hover {
+    color: color.adjust(variables.$color-green, $lightness: -10%);
+    text-decoration: underline;
+  }
+}
+

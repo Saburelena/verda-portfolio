@@ -1,9 +1,9 @@
-@use '../variables' as vars;
+@use '../variables' as variables;
 
 
 .main {
   &__container {
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
   }
 
   &__inner {

@@ -1,0 +1,21 @@
+/* ТИПОГРАФИКА */
+
+// шрифт
+$font-family-basic: 'CoFo Sans', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+$font-weight-regular: 400;    // обычный текст
+$font-weight-medium: 500;     // заголовки, кнопки
+// основной текст
+$font-size-min: 20px;     // основной текст на 360px по макету
+$font-size-max: 22px;     // основной текст на  1920px по макету
+// заголовки
+$heading1-min: 48px;      // h1 на мобиле (360px)
+$heading1-max: 70px;      // h1 на десктопе (1920px)
+
+$heading2-min: 36px;      // h2 на мобиле
+$heading2-max: 50px;      // h2 на десктопе
+
+$heading3-min: 28px;      // h3 на мобиле
+$heading3-max: 32px;      // h3 на десктопе
+
+$heading4-min: 24px;      // h4 на мобиле
+$heading4-max: 28px;      // h4 на десктопе

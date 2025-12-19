@@ -1,0 +1,13 @@
+{
+  "attr-no-duplication": true,
+  "attr-unsafe-chars": true,
+  "alt-require": true,
+  "tag-name-lowercase": true,
+  "spec-char-escape": true,
+  "id-unique": true,
+  "src-not-empty": true,
+  "attr-value-double-quotes": true,
+  "doctype-first": true,
+  "tag-self-close": true,
+  "title-require": true
+}

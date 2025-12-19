@@ -1,0 +1,25 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "selector-class-pattern": [
+      "^(?:(?:[a-z][a-z0-9]*)(?:__[a-z][a-z0-9]+)?(?:--[a-z][a-z0-9]+)?|(?:is|js|has)-[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*|[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)$",
+      {
+        "message": "Use: .block__element--modifier (BEM), .is-hidden (state), .some-component (kebab-case)"
+      }
+    ],
+    "scss/dollar-variable-pattern": "^[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*$",
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "use", "forward", "mixin", "include", "function",
+          "if", "else", "media", "content"
+        ]
+      }
+    ],
+    "custom-property-pattern": "^[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*$",
+    "property-no-deprecated": true,
+    "no-descending-specificity": true,
+    "scss/operator-no-newline-after": true
+  }
+}

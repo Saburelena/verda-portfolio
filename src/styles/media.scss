@@ -1,0 +1,87 @@
+@use 'variables' as variables;
+
+/* МЕДИА МИКСИНЫ */
+
+// От 360px (по макету)
+@mixin mobile-up {
+  @media (min-width: #{variables.$mobile}) {
+    @content;
+  }
+}
+
+// От 480px (большие телефоны)
+@mixin mobile-large-up {
+  @media (min-width: #{variables.$mobile-large}) {
+    @content;
+  }
+}
+
+// От 768px (планшеты)
+@mixin tablet-up {
+  @media (min-width: #{variables.$tablet}) {
+    @content;
+  }
+}
+
+// От 992px (большие планшеты)
+@mixin tablet-large-up {
+  @media (min-width: #{variables.$tablet-large}) {
+    @content;
+  }
+}
+
+// От 1024px (ноутбуки)
+@mixin desktop-up {
+  @media (min-width: #{variables.$desktop}) {
+    @content;
+  }
+}
+
+// От 1200px (стандартные мониторы)
+@mixin desktop-large-up {
+  @media (min-width: #{variables.$desktop-large}) {
+    @content;
+  }
+}
+
+// От 1440px (большие мониторы)
+@mixin wide-up {
+  @media (min-width: #{variables.$wide}) {
+    @content;
+  }
+}
+
+// От 1920px (Full HD)
+@mixin full-hd-up {
+  @media (min-width: #{variables.$full-hd}) {
+    @content;
+  }
+}
+
+// От 2560px (Ultra Wide / 2K)
+@mixin ultra-wide-up {
+  @media (min-width: #{variables.$ultra-wide}) {
+    @content;
+  }
+}
+
+// ТОЛЬКО для мобильных (до 767px)
+@mixin mobile-only {
+  @media (max-width: #{variables.$tablet - 1}) {
+    @content;
+  }
+}
+
+// ТОЛЬКО для планшетов (768px - 1023px)
+@mixin tablet-only {
+  @media (min-width: #{variables.$tablet}) and (max-width: #{variables.$desktop - 1}) {
+    @content;
+  }
+}
+
+// ТОЛЬКО для десктопа (1024px и больше)
+@mixin desktop-only {
+  @media (min-width: #{variables.$desktop}) {
+    @content;
+  }
+}

@@ -1,0 +1,18 @@
+/* БАЗОВЫЕ ЦВЕТА */
+$color-white: #FFF;
+$color-dark-gray: #292B32;
+$color-green: #39AA5D;
+
+/* ДОПОЛНИТЕЛЬНЫЕ ЦВЕТА */
+$color-light-gray: #DFE3E8;               // фон неактивных control кнопок
+$color-light-gray-secondary: #D2D8DE;     // фон кнопок с акцией
+$color-gray-text: #8C9AAC;                // зачеркнутая цена
+$color-border-alpha: #0B203F1A;           // прозрачная рамка (hex с alpha)
+
+/* ЦВЕТА ДЛЯ HEADER */
+$header-background: #F2F5F8CC;                    // фон шапки с прозрачностью
+$logo-color: $color-dark-gray;                    // цвет логотипа
+$menu-text-color: $color-dark-gray;               // текст меню
+$register-button-text-color: $color-dark-gray;    // текст кнопки "Sign in"
+$cart-button-background: $color-green;            // фон кнопки корзины
+$cart-button-text-color: $color-white;            // текст на кнопке корзины

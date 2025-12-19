@@ -2,12 +2,12 @@
 @use 'base';
 @use 'modern';
 @use 'fonts';
-@use 'mixins' as mix;
+@use 'mixins' as mixins;
 @use 'globals';
 @use 'layout/container';
 @use 'components/main';
 @use 'utilities';
-@use 'media';
+@use 'media' as media;
 
 
 
