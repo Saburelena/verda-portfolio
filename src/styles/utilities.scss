@@ -1,4 +1,4 @@
-@use 'media' as *;
+@use 'media' as media;
 
 /* СКРЫТИЕ */
 .visually-hidden {
@@ -14,13 +14,13 @@
 }
 
 .hidden-mobile {
-  @include mobile-only {
+  @include media.mobile-only {
     display: none !important;
   }
 }
 
 .visible-mobile {
-  @include tablet-up {
+  @include media.tablet-up {
     display: none !important;
   }
 }

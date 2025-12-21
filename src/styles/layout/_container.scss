@@ -1,5 +1,3 @@
-@use '../variables' as variables;
-
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;

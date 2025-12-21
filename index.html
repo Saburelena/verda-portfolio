@@ -8,8 +8,94 @@
 		<title>Verda</title>
 	</head>
 	<body>
-		<div id="app">
-			<main class="main">
+		<div id="app" class="app">
+            <header class="header">
+				<div class="header__inner container">
+					<!-- Бургер (только мобилка, слева) -->
+					<button class="header__burger visible-mobile" 
+                           aria-label="Open menu" 
+                           aria-expanded="false"
+                           data-menu-toggle>
+                       <svg class="burger-icon"
+					 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+	<rect id="ham" width="24" height="24" x="0" y="0" />
+	<path id="Union" d="M2 8C2 7.44772 2.44772 7 3 7L21 7C21.5523 7 22 7.44772 22 8L22 8.5C22 9.05228 21.5523 9.5 21 9.5L3 9.5C2.44772 9.5 2 9.05228 2 8.5L2 8ZM2 15.5C2 14.9477 2.44772 14.5 3 14.5L21 14.5C21.5523 14.5 22 14.9477 22 15.5L22 16C22 16.5523 21.5523 17 21 17L3 17C2.44772 17 2 16.5523 2 16L2 15.5Z" fill="rgb(41,43,50)" fill-rule="evenodd" />
+					   </svg>
+                    </button>
+					<!-- Логотип (всегда) -->
+					<a class="header__logo logo" href="/">
+						<img
+						 src="./src/styles/assets/images/logo.svg"
+						 alt="Verda" width="73" height="22" loading="lazy"
+						 class="logo__image">
+					</a>
+					<!-- Навигация (только десктоп) -->
+					<nav class="header__menu hidden-mobile" aria-label="Main navigation">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a href="/" class="header__menu-link">Catalog</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="/" class="header__menu-link">About</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="/" class="header__menu-link">Delivery</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- Actions (справа) -->
+					<div class="header__actions">
+						 <!-- Sign In (только десктоп) -->
+						<button class="header__button header__button--signin-transparent hidden-mobile" aria-label="Sign In">
+						  <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+	                      <rect id="user 2" width="16" height="16" x="0" y="0" fill="rgb(255,255,255)" fill-opacity="0" />
+	                      <path id="Vector" d="M13.3332 14L13.3332 12.6667C13.3332 11.9594 13.0522 11.2811 12.5521 10.781C12.052 10.281 11.3737 10 10.6665 10L5.33317 10C4.62593 10 3.94765 10.281 3.44755 10.781C2.94746 11.2811 2.6665 11.9594 2.6665 12.6667L2.6665 14" fill-rule="nonzero" stroke="rgb(41,43,50)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	                      <path id="Vector" d="M8.00016 7.33333C6.5274 7.33333 5.3335 6.13943 5.3335 4.66667C5.3335 3.19391 6.5274 2 8.00016 2C9.47292 2 10.6668 3.19391 10.6668 4.66667C10.6668 6.13943 9.47292 7.33333 8.00016 7.33333Z" stroke="rgb(41,43,50)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                          </svg>
+                          <span class="button-text">Sign in</span>
+					    </button>
+						<!-- Cart (всегда) -->
+					    <button class="header__button header__button--cart" aria-label="Cart">
+					  <svg class="cart-icon" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+	                      <rect id="Cart" width="18" height="18" x="0" y="0" />
+	                      <path id="Vector" d="M7.25 15.107C7.25 15.462 6.96275 15.75 6.60771 15.75C6.25267 15.75 5.96486 15.462 5.96486 15.107C5.96486 14.752 6.25267 14.464 6.60771 14.464C6.96275 14.464 7.25 14.752 7.25 15.107ZM14.3217 15.107C14.3217 15.462 14.0339 15.75 13.6789 15.75C13.3238 15.75 13.036 15.462 13.036 15.107C13.036 14.752 13.3238 14.464 13.6789 14.464C14.0339 14.464 14.3217 14.752 14.3217 15.107Z" fill-rule="evenodd" />
+	                      <path id="Vector (Stroke)" d="M13.6787 14.934C13.5833 14.934 13.506 15.0115 13.5059 15.1069L13.5095 15.142C13.5257 15.2208 13.5952 15.2804 13.6787 15.2805C13.7743 15.2805 13.8516 15.2025 13.8516 15.1069C13.8514 15.0115 13.7742 14.934 13.6787 14.934ZM6.7771 15.0725C6.76332 15.0048 6.7101 14.9515 6.64233 14.9377L6.60791 14.934C6.51241 14.934 6.43444 15.0115 6.43433 15.1069C6.43433 15.2025 6.51234 15.2805 6.60791 15.2805C6.69141 15.2804 6.76094 15.2208 6.7771 15.142L6.78076 15.1069L6.7771 15.0725ZM4.03564 1.43408L4.10742 1.437C4.46498 1.4684 4.76377 1.73214 4.83545 2.0896L5.34741 4.64868L15.6072 4.64868C15.8502 4.64875 16.0806 4.75668 16.2356 4.94385C16.3906 5.13115 16.4539 5.37814 16.4084 5.61694L15.3801 11.0105L15.3787 11.0171C15.2825 11.5008 15.0194 11.9354 14.6353 12.2446C14.2551 12.5506 13.7804 12.7132 13.2927 12.7075L13.2927 12.709L7.04443 12.709L7.04443 12.7075C6.55676 12.7133 6.0821 12.5506 5.7019 12.2446C5.31775 11.9354 5.05389 11.5008 4.95776 11.0171L4.95776 11.0164L3.88257 5.64478C3.87973 5.63221 3.8775 5.61947 3.87524 5.60669L3.36694 3.06592L1.46411 3.06592C1.0135 3.06592 0.648193 2.70061 0.648193 2.25C0.648193 1.79939 1.0135 1.43408 1.46411 1.43408L4.03564 1.43408ZM6.55811 10.6978L6.55884 10.6992C6.58037 10.8072 6.6393 10.9041 6.7251 10.9731C6.81094 11.0422 6.91815 11.0792 7.02832 11.0771L13.3081 11.0771C13.4183 11.0793 13.5262 11.0423 13.6121 10.9731C13.6978 10.9041 13.7568 10.8072 13.7783 10.6992L14.6206 6.28052L5.67407 6.28052L6.55811 10.6978ZM8.06616 15.1069C8.06616 15.9125 7.41347 16.5658 6.60791 16.5659C5.80226 16.5659 5.14893 15.9126 5.14893 15.1069C5.14904 14.3014 5.80233 13.6487 6.60791 13.6487L6.75659 13.656C7.49224 13.7306 8.06606 14.3516 8.06616 15.1069ZM15.1377 15.1069C15.1377 15.9126 14.4844 16.5659 13.6787 16.5659C12.9235 16.5658 12.3025 15.9919 12.2278 15.2563L12.2205 15.1069L12.2278 14.9583C12.3024 14.2226 12.9234 13.6488 13.6787 13.6487L13.8281 13.656C14.5636 13.7308 15.1376 14.3518 15.1377 15.1069Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+                          </svg>
+						  <span class="cart-text">Cart</span>
+                          <span class="cart-count" aria-hidden="true">3</span>
+					    </button>	
+					</div>
+				</div>
+				<!-- Мобильное меню -->
+					<div class="mobile-menu" data-mobile-menu hidden>
+						<nav class="mobile-menu__nav">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__item">
+								<a href="/" class="mobile-menu__link">Catalog</a>
+							</li>
+							<li class="mobile-menu__item">
+								<a href="/" class="mobile-menu__link">About</a>
+							</li>
+							<li class="mobile-menu__item">
+								<a href="/" class="mobile-menu__link">Delivery</a>
+							</li>
+							<li class="mobile-menu__divider" role="separator" aria-hidden="true"></li>
+							<li>
+								<button class="mobile-menu__button mobile-menu__button--signin"
+                            aria-label="Sign In">
+                       <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+	                      <rect id="user 2" width="16" height="16" x="0" y="0" fill="rgb(255,255,255)" fill-opacity="0" />
+	                      <path id="Vector" d="M13.3332 14L13.3332 12.6667C13.3332 11.9594 13.0522 11.2811 12.5521 10.781C12.052 10.281 11.3737 10 10.6665 10L5.33317 10C4.62593 10 3.94765 10.281 3.44755 10.781C2.94746 11.2811 2.6665 11.9594 2.6665 12.6667L2.6665 14" fill-rule="nonzero" stroke="rgb(41,43,50)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+	                      <path id="Vector" d="M8.00016 7.33333C6.5274 7.33333 5.3335 6.13943 5.3335 4.66667C5.3335 3.19391 6.5274 2 8.00016 2C9.47292 2 10.6668 3.19391 10.6668 4.66667C10.6668 6.13943 9.47292 7.33333 8.00016 7.33333Z" stroke="rgb(41,43,50)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                          </svg>
+                          Sign in
+					    </button>
+							</li>
+							</ul>
+						</nav>
+					</div>
+			</header>
+			<main class="main main-layout">
 				<div class="main__container container">
 					<div class="main__inner">
 						<h1 class="main__title">Verda!</h1>

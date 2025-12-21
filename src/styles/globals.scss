@@ -1,7 +1,6 @@
+@use './mixins' as mixins;
+@use './variables' as variables;
 @use 'sass:color';
-@use 'variables' as variables;
-@use 'mixins' as mixins;
-
 
 /* БАЗОВАЯ FLUID ТИПОГРАФИКА */
 html {
