@@ -1,47 +1,21 @@
 @use 'breakpoints' as breakpoints;
-@use 'colors' as colors;
-@use 'buttons' as buttons;
 @use 'typography' as typography;
 @use 'layout' as layout;
 
 :root {
-  /* Брейкпоинты */
+  // Брейкпоинты
   --mobile: #{breakpoints.$mobile};
-  --mobile-large: #{breakpoints.$mobile-large};
   --tablet: #{breakpoints.$tablet};
-  --tablet-large: #{breakpoints.$tablet-large};
   --desktop: #{breakpoints.$desktop};
-  --desktop-large: #{breakpoints.$desktop-large};
-  --wide: #{breakpoints.$wide};
   --full-hd: #{breakpoints.$full-hd};
-  --ultra-wide: #{breakpoints.$ultra-wide};
 
-  /* Общие */
-  --color-white: #{colors.$color-white};
-  --color-dark-gray: #{colors.$color-dark-gray};
-  --color-green: #{colors.$color-green};
-  --color-light-gray: #{colors.$color-light-gray};
-  --color-light-gray-secondary: #{colors.$color-light-gray-secondary};
-  --color-gray-text: #{colors.$color-gray-text};
-  --color-border-alpha: #{colors.$color-border-alpha};
-
-  /* Секция */
-  --section-padding-y: #{layout.$section-padding-y};
-
-  /* Контейнер */
+  // Контейнер
   --container-width: #{layout.$container-width};
   --container-padding-x: #{layout.$container-padding-x};
 
-  /* Шрифт */
-  --font-family-basic: #{typography.$font-family-basic};
-  --font-weight-regular: #{typography.$font-weight-regular};
-  --font-weight-medium: #{typography.$font-weight-medium};
-
-  /* Основной текст */
+  // Типографика
   --font-size-min: #{typography.$font-size-min};
   --font-size-max: #{typography.$font-size-max};
-
-  /* Заголовки */
   --heading1-min: #{typography.$heading1-min};
   --heading1-max: #{typography.$heading1-max};
   --heading2-min: #{typography.$heading2-min};
@@ -51,83 +25,6 @@
   --heading4-min: #{typography.$heading4-min};
   --heading4-max: #{typography.$heading4-max};
 
-  /* кнопки */
-  --button-height-cta: #{buttons.$button-height-cta};
-  --button-height-control: #{buttons.$button-height-control};
-
-  /* CTA кнопки */
-  --button-cta-cart-background: #{buttons.$button-cta-cart-background};
-  --button-cta-cart-text-color: #{buttons.$button-cta-cart-text-color};
-  --button-cta-shop-background: #{buttons.$button-cta-shop-background};
-  --button-cta-shop-text-color: #{buttons.$button-cta-shop-text-color};
-  --button-cta-shop-border-color: #{buttons.$button-cta-shop-border-color};
-  --button-cta-signin-background: #{buttons.$button-cta-signin-background};
-  --button-cta-signin-text-color: #{buttons.$button-cta-signin-text-color};
-  --button-cta-signin-border-color: #{buttons.$button-cta-signin-border-color};
-  --button-cta-signin-border-width: #{buttons.$button-cta-signin-border-width};
-
-  /* Hover: CTA кнопки */
-  --button-cta-cart-hover-background: #{buttons.$button-cta-cart-hover-background};
-  --button-cta-cart-hover-text-color: #{buttons.$button-cta-cart-hover-text-color};
-  --button-cta-shop-hover-background: #{buttons.$button-cta-shop-hover-background};
-  --button-cta-shop-hover-text-color: #{buttons.$button-cta-shop-hover-text-color};
-  --button-cta-shop-hover-border-color: #{buttons.$button-cta-shop-hover-border-color};
-  --button-cta-signin-hover-background: #{buttons.$button-cta-signin-hover-background};
-  --button-cta-signin-hover-text-color: #{buttons.$button-cta-signin-hover-text-color};
-  --button-cta-signin-hover-border-color: #{buttons.$button-cta-signin-hover-border-color};
-
-  /* CONTROL кнопки */
-  --button-control-background: #{buttons.$button-control-background};
-  --button-control-text-color: #{buttons.$button-control-text-color};
-  --button-control-active-background: #{buttons.$button-control-active-background};
-  --button-control-active-text-color: #{buttons.$button-control-active-text-color};
-
-  /* Hover: Control кнопки */
-  --button-control-hover-background: #{buttons.$button-control-hover-background};
-  --button-control-hover-text-color: #{buttons.$button-control-hover-text-color};
-  --button-control-active-hover-background: #{buttons.$button-control-active-hover-background};
-  --button-control-active-hover-text-color: #{buttons.$button-control-active-hover-text-color};
-
-  /* Кнопки с акцией */
-  --button-sale-background: #{buttons.$button-sale-background};
-  --button-sale-text-color: #{buttons.$button-sale-text-color};
-  --button-sale-text-color-old: #{buttons.$button-sale-text-color-old};
-  --button-sale-text-decoration: #{buttons.$button-sale-text-decoration};
-  --button-sale-active-background: #{buttons.$button-sale-active-background};
-  --button-sale-active-text-color: #{buttons.$button-sale-active-text-color};
-
-  /* Hover: Кнопки с акцией */
-  --button-sale-hover-background: #{buttons.$button-sale-hover-background};
-  --button-sale-hover-text-color: #{buttons.$button-sale-hover-text-color};
-  --button-sale-hover-text-color-old: #{buttons.$button-sale-hover-text-color-old};
-  --button-sale-active-hover-background: #{buttons.$button-sale-active-hover-background};
-  --button-sale-active-hover-text-color: #{buttons.$button-sale-active-hover-text-color};
-  --button-sale-active-hover-text-color-old: #{buttons.$button-sale-active-hover-text-color-old};
-
-  /* Focus для кнопок */
-  --focus-outline-width: #{buttons.$focus-outline-width};
-  --focus-outline-offset: #{buttons.$focus-outline-offset};
-  --focus-outline-color-primary: #{buttons.$focus-outline-color-primary};
-  --focus-outline-color-secondary: #{buttons.$focus-outline-color-secondary};
-  --focus-outline-color-light: #{buttons.$focus-outline-color-light};
-  --focus-shadow-primary: #{buttons.$focus-shadow-primary};
-  --focus-shadow-secondary: #{buttons.$focus-shadow-secondary};
-  --focus-shadow-light: #{buttons.$focus-shadow-light};
-
-  /* Border Radius */
-  --border-radius-small: #{layout.$border-radius-small};
-  --border-radius-medium: #{layout.$border-radius-medium};
-  --border-radius-large: #{layout.$border-radius-large};
-
-  /* Длительности */
-  --transition-duration: #{layout.$transition-duration};
-  --transition-timing-standard: #{layout.$transition-timing-standard};
-
-  /* Header */
-  --header-background: #{colors.$header-background};
-  --logo-color: #{colors.$logo-color};
-  --menu-text-color: #{colors.$menu-text-color};
-  --register-button-text-color: #{colors.$register-button-text-color};
-  --cart-button-background: #{colors.$cart-button-background};
-  --cart-button-text-color: #{colors.$cart-button-text-color};
+  // header__actions
+  --header-actions-gap: 2px;
 }

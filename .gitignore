@@ -22,5 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-src/styles/*.css
-src/styles/*.css.map
+*.css
+*.css.map
+# Auto-generated CSS files from Vite
+src/ui/**/*.css
+src/ui/**/*.css.map
+src/sections/**/*.css
+src/sections/**/*.css.map

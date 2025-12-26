@@ -1,18 +1,31 @@
-/* БАЗОВЫЕ ЦВЕТА */
-$color-white: #FFF;
-$color-dark-gray: #292B32;
-$color-green: #39AA5D;
+// ОСНОВНЫЕ ЦВЕТА
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark-gray: #292b32;
+$color-green: #39aa5d;
+$color-body: #f0f3f6;
 
-/* ДОПОЛНИТЕЛЬНЫЕ ЦВЕТА */
-$color-light-gray: #DFE3E8;               // фон неактивных control кнопок
-$color-light-gray-secondary: #D2D8DE;     // фон кнопок с акцией
-$color-gray-text: #8C9AAC;                // зачеркнутая цена
-$color-border-alpha: #0B203F1A;           // прозрачная рамка (hex с alpha)
+// ДРУГИЕ ЦВЕТА
+$color-light-gray: #dfe3e8;
+$color-light-gray-secondary: #d2d8de;
+$color-gray-text: #8c9aac;
+$color-green-hover: #268644;
+$color-control-hover: #282a30;
 
-/* ЦВЕТА ДЛЯ HEADER */
-$header-background: #F2F5F8CC;                    // фон шапки с прозрачностью
-$logo-color: $color-dark-gray;                    // цвет логотипа
-$menu-text-color: $color-dark-gray;               // текст меню
-$register-button-text-color: $color-dark-gray;    // текст кнопки "Sign in"
-$cart-button-background: $color-green;            // фон кнопки корзины
-$cart-button-text-color: $color-white;            // текст на кнопке корзины
+// ПРОЗРАЧНЫЕ ЦВЕТА
+$color-border-alpha: rgba($color-dark-gray, 10%);
+$color-white-alpha-60: rgba($color-white, 60%);
+$color-black-alpha-30: rgba($color-dark-gray, 30%);
+$header-background: rgba(242, 245, 248, 80%);
+
+// ЦВЕТА ДЛЯ ИСПОЛЬЗОВАНИЯ В КОМПОНЕНТАХ
+$logo-color: $color-dark-gray;
+$menu-text-color: $color-dark-gray;
+$register-button-text-color: $color-dark-gray;
+$cart-button-background: $color-green;
+$cart-button-text-color: $color-white;
+
+// ЦВЕТА ДЛЯ ФОКУСА
+$focus-outline-color-primary: rgba($color-green, 40%);
+$focus-outline-color-secondary: rgba($color-dark-gray, 30%);
+$focus-outline-color-light: $color-white-alpha-60;

@@ -1,11 +1,12 @@
-/* ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ */
+// Вспомогательные функции
 @use "sass:math";
+@use "variables";
 
 @function strip-unit($value) {
   @return math.div($value, $value * 0 + 1);
 }
 
-/* УНИВЕРСАЛЬНЫЙ FLUID МИКСИН */
+// Универсаотный fluid миксин
 @mixin fluid(
   $property,
   $min-size: 16px,
@@ -20,16 +21,12 @@
   );
 }
 
-/* УДОБНЫЕ ОБЕРТКИ */
+// Удобные обертки
 @mixin fluid-text($min-size, $max-size, $min-viewport: 375px, $max-viewport: 1920px) {
   @include fluid(font-size, $min-size, $max-size, $min-viewport, $max-viewport);
 }
 
-@mixin fluid-margin-bottom($min-size, $max-size, $min-viewport: 375px, $max-viewport: 1920px) {
-  @include fluid(margin-bottom, $min-size, $max-size, $min-viewport, $max-viewport);
-}
-
-/* БАЗОВЫЕ МИКСИНЫ */
+// Базовые миксины
 @mixin reset-link {
   color: inherit;
   text-decoration: none;
@@ -82,5 +79,47 @@
     &:active {
       @content;
     }
+  }
+}
+
+@mixin layout-header($gap: 0) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin focus-outline-rounded(
+  $color: variables.$focus-outline-color-secondary,
+  $offset: 2px
+) {
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 #{$offset} #{$color};
+    border-radius: variables.$border-radius-medium;
+  }
+}
+
+// Базовые стили для всех кнопок
+@mixin button-base {
+  @include reset-button;
+  @include focus-outline-rounded;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: variables.$button-height-cta;
+  padding: 12px 24px;
+  border: none;
+  border-radius: variables.$border-radius-large;
+  font-weight: variables.$font-weight-medium;
+  font-size: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@mixin press-down($offset: 1px) {
+  &:active {
+    transform: translateY($offset);
   }
 }

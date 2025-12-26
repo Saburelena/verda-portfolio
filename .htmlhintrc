@@ -1,13 +1,12 @@
 {
-  "attr-no-duplication": true,
-  "attr-unsafe-chars": true,
-  "alt-require": true,
-  "tag-name-lowercase": true,
-  "spec-char-escape": true,
-  "id-unique": true,
-  "src-not-empty": true,
-  "attr-value-double-quotes": true,
-  "doctype-first": true,
-  "tag-self-close": true,
-  "title-require": true
+  "doctype-first": { "severity": "off" },
+  "tag-self-close": { "severity": "error" },
+  "attr-lowercase": { "severity": "error" },
+  "attr-value-double-quotes": { "severity": "error" },
+  "id-unique": { "severity": "error" },
+  "head-script-disabled": { "severity": "off" },
+  "style-disabled": { "severity": "off" },
+  "inline-script-disabled": { "severity": "off" },
+  "inline-style-disabled": { "severity": "off" },
+  "tag-pair": { "severity": "error" }
 }

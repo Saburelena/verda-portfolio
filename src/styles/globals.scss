@@ -1,8 +1,8 @@
 @use './mixins' as mixins;
 @use './variables' as variables;
-@use 'sass:color';
 
 /* БАЗОВАЯ FLUID ТИПОГРАФИКА */
+
 html {
   // Основной размер шрифта для всего документа
   @include mixins.fluid-text(
@@ -17,11 +17,10 @@ body {
   font-family: variables.$font-family-basic;
   font-weight: variables.$font-weight-regular;
   color: variables.$color-dark-gray;
-  background-color: variables.$color-white;
+  background-color: variables.$color-body;
 }
 
 /* FLUID ЗАГОЛОВКИ */
-
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   font-weight: variables.$font-weight-medium;
@@ -65,7 +64,6 @@ h4, .h4 {
 
 
 /* БАЗОВЫЕ СТИЛИ ТЕКСТА */
-
 p {
   margin-bottom: 1rem;
   line-height: 1.6;
@@ -79,7 +77,6 @@ p {
 
 
 /* ССЫЛКИ */
-
 a,
 button,
 input,
@@ -88,13 +85,4 @@ svg * {
   transition: variables.$transition-duration variables.$transition-timing-standard;
 }
 
-a {
-  color: variables.$color-green;
-  text-decoration: none;
-
-  &:hover {
-    color: color.adjust(variables.$color-green, $lightness: -10%);
-    text-decoration: underline;
-  }
-}
 

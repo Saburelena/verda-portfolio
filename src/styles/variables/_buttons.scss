@@ -1,73 +1,23 @@
 @use 'colors' as colors;
 
-/* КНОПКИ общие размеры */
-$button-height-cta: 46px;        // Call-to-action кнопки
-$button-height-control: 36px;    // Элементы управления
+$button-height-cta: 46px;
 
-/* CTA кнопки */
-$button-cta-cart-background: colors.$color-green;            // фон Cart
-$button-cta-cart-text-color: colors.$color-white;            // текст Cart
+$button-cta-cart-background: colors.$color-green;
+$button-cta-cart-text-color: colors.$color-white;
 
-$button-cta-shop-background: colors.$color-white;            // фон Shop Now
-$button-cta-shop-text-color: colors.$color-dark-gray;        // текст Shop Now
-$button-cta-shop-border-color: transparent;           // рамка Shop Now
+$button-cta-signin-background: transparent;
+$button-cta-signin-text-color: colors.$color-dark-gray;
+$button-cta-signin-border-color: colors.$color-border-alpha;
+$button-cta-signin-border-width: 1px;
 
-$button-cta-signin-background: transparent;           // фон Sign In (прозрачный)
-$button-cta-signin-text-color: colors.$color-dark-gray;      // текст Sign In
-$button-cta-signin-border-color: colors.$color-border-alpha; // рамка Sign In
-$button-cta-signin-border-width: 1px;                 // толщина рамки
-
-/* HOVER: CTA кнопки */
-$button-cta-cart-hover-background: #268644;
+$button-cta-cart-hover-background: colors.$color-green-hover;
 $button-cta-cart-hover-text-color: colors.$color-white;
-$button-cta-shop-hover-background: #D2D8DE;
-$button-cta-shop-hover-text-color: colors.$color-dark-gray;
-$button-cta-shop-hover-border-color: transparent;
-$button-cta-signin-hover-background: rgb(255 255 255 / 60%);
+$button-cta-signin-hover-background: colors.$color-white-alpha-60;
 $button-cta-signin-hover-text-color: colors.$color-dark-gray;
 $button-cta-signin-hover-border-color: colors.$color-border-alpha;
 
-/* CONTROL кнопки (количество товара в цене) */
-$button-control-background: colors.$color-light-gray;        // фон неактивной
-$button-control-text-color: colors.$color-dark-gray;         // текст неактивной
-
-$button-control-active-background: colors.$color-green;      // фон активной (выбран товар)
-$button-control-active-text-color: colors.$color-white;      // текст активной
-
-/* HOVER: CONTROL кнопки (количество товара в цене) */
-$button-control-hover-background: #282A30;
-$button-control-hover-text-color: #FFF;
-$button-control-active-hover-background: #268644;
-$button-control-active-hover-text-color: colors.$color-white;
-
-/* Кнопки с акцией (со скидкой) */
-$button-sale-background: colors.$color-light-gray-secondary;    // фон
-$button-sale-text-color: colors.$color-dark-gray;               // обычная цена
-$button-sale-text-color-old: colors.$color-gray-text;           // зачеркнутая цена
-$button-sale-text-decoration: line-through;              // перечеркивание
-
-$button-sale-active-background: colors.$color-green;                   // фон активной со скидкой (выбран товар)
-$button-sale-active-text-color: colors.$color-white;                   // текст активной
-
-/* HOVER: SALE КНОПКИ */
-$button-sale-hover-background: #282A30;
-$button-sale-hover-text-color: #FFF;
-$button-sale-hover-text-color-old: rgb(255 255 255 / 70%);
-$button-sale-active-hover-background: #268644;
-$button-sale-active-hover-text-color: colors.$color-white;
-$button-sale-active-hover-text-color-old: rgb(255 255 255 / 70%);
-
-/* Общие настройки фокуса для кнопок */
 $focus-outline-width: 2px;
 $focus-outline-offset: 2px;
-
-/* Цвета фокуса для разных типов кнопок */
-$focus-outline-color-primary: rgb(57 170 93 / 40%);   // зеленый с прозрачностью
-$focus-outline-color-secondary: rgb(41 43 50 / 30%);  // серый с прозрачностью
-$focus-outline-color-light: rgb(255 255 255 / 60%);   // белый с прозрачностью
-
-/* Дополнительно: box-shadow для более красивого фокуса */
-$focus-shadow-primary: 0 0 0 3px rgb(57 170 93 / 30%);
-$focus-shadow-secondary: 0 0 0 3px rgb(41 43 50 / 20%);
-$focus-shadow-light: 0 0 0 2px rgb(255 255 255 / 40%);
-
+$focus-shadow-primary: 0 0 0 3px colors.$focus-outline-color-primary;
+$focus-shadow-secondary: 0 0 0 3px colors.$focus-outline-color-secondary;
+$focus-shadow-light: 0 0 0 2px colors.$focus-outline-color-light;

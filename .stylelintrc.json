@@ -1,5 +1,6 @@
 {
-  "extends": "stylelint-config-standard-scss",
+  "customSyntax": "postcss-scss",
+  "plugins": ["stylelint-scss"],
   "rules": {
     "selector-class-pattern": [
       "^(?:(?:[a-z][a-z0-9]*)(?:__[a-z][a-z0-9]+)?(?:--[a-z][a-z0-9]+)?|(?:is|js|has)-[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*|[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)$",
@@ -7,19 +8,35 @@
         "message": "Use: .block__element--modifier (BEM), .is-hidden (state), .some-component (kebab-case)"
       }
     ],
-    "scss/dollar-variable-pattern": "^[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*$",
+    "scss/dollar-variable-pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
     "scss/at-rule-no-unknown": [
       true,
       {
         "ignoreAtRules": [
           "use", "forward", "mixin", "include", "function",
-          "if", "else", "media", "content"
+          "if", "else", "media", "content", "return"
         ]
       }
     ],
-    "custom-property-pattern": "^[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*$",
+    "custom-property-pattern": ["^[a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*$", {}],
     "property-no-deprecated": true,
-    "no-descending-specificity": true,
-    "scss/operator-no-newline-after": true
+    "no-descending-specificity": null,
+    "scss/operator-no-newline-after": true,
+
+    "no-duplicate-selectors": true,
+    "no-empty-source": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+
+    "alpha-value-notation": ["percentage", {}],
+    "color-function-notation": null,
+    "function-name-case": ["lower", {}],
+    "length-zero-no-unit": [true, {}],
+    "number-max-precision": [2, {}],
+
+    "comment-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": null
   }
 }

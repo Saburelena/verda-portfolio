@@ -1,6 +1,5 @@
 @use 'media' as media;
 
-/* СКРЫТИЕ */
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -13,14 +12,14 @@
   border: 0 !important;
 }
 
-.hidden-mobile {
-  @include media.mobile-only {
+.visible-mobile {
+  @include media.tablet-up {
     display: none !important;
   }
 }
 
-.visible-mobile {
-  @include media.tablet-up {
+.u-hidden-mobile {
+  @include media.mobile-only {
     display: none !important;
   }
 }

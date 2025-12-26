@@ -1,16 +1,32 @@
-@use './variables' as variables;
-@use './reset' as reset;
-@use './base' as base;
-@use './modern' as modern;
-@use './fonts' as fonts;
-@use './mixins' as mixins;
-@use './globals';
-@use './layout/app' as layoutApp;
-@use './layout/container' as layoutContainer;
-@use './components/header' as headerComponent;
-@use './components/main' as mainComponent;
-@use './utilities' as utilities;
-@use './media' as media;
+// Базовые стили и сбросы
+@use "reset";
+@use "base";
+@use "fonts";
+@use "modern";
+
+// Переменные и миксины
+@use "variables" as *;
+@use "mixins";
+
+// UI компоненты
+@use "../ui/buttons/cart-button/cart-button";
+@use "../ui/logo/logo";
+
+// Секции
+@use "../sections/header/header";
+@use "../sections/main/main";
+@use "../sections/footer/footer";
+
+// Layout
+@use "layout/app";
+@use "layout/container";
+
+// Глобальные стили
+@use "globals";
+
+// Утилиты
+@use "utilities";
+@use "media";
 
 
 
