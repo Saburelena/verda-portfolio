@@ -53,6 +53,7 @@
 
 .header {
   background-color: variables.$header-background;
+  border-bottom: 1px solid variables.$color-border-alpha;
 
   &__inner {
     @include mixins.layout-header(24px);
@@ -106,13 +107,11 @@
 
   &__menu-link {
     @include _header-nav-item;
-
     color: variables.$menu-text-color;
   }
 
   &__logo {
     @include _header-nav-item;
-
     color: variables.$logo-color;
   }
 
@@ -150,6 +149,8 @@
 
   &__mobile-menu {
     display: block;
+    // Сдвинуть вниз на 1px (высота линии)
+    margin-top: 1px;
     padding-top: 24px;
     padding-bottom: 40px;
 
