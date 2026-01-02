@@ -6,10 +6,10 @@
   @include mixins.press-down;
 
   width: 106px;
-  height: 46px;
   background-color: variables.$button-cta-cart-background;
   color: variables.$button-cta-cart-text-color;
   gap: 8px;
+  line-height: variables.$nav-line-height-desktop-default;
 
   &__icon {
     width: 18px;

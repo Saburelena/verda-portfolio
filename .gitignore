@@ -29,3 +29,5 @@ src/ui/**/*.css
 src/ui/**/*.css.map
 src/sections/**/*.css
 src/sections/**/*.css.map
+PROGRESS_LOG.md
+_docs/

@@ -42,7 +42,6 @@
   border: none;
   font: inherit;
   color: inherit;
-  cursor: pointer;
 }
 
 @mixin flex-center($is-inline: false) {
@@ -115,11 +114,16 @@
   font-weight: variables.$font-weight-medium;
   font-size: 16px;
   white-space: nowrap;
-  cursor: pointer;
 }
 
 @mixin press-down($offset: 1px) {
   &:active {
     transform: translateY($offset);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY($offset);
+    }
   }
 }

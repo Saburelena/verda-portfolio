@@ -1,6 +1,4 @@
 @use 'breakpoints' as breakpoints;
-@use 'typography' as typography;
-@use 'layout' as layout;
 
 :root {
   // Брейкпоинты
@@ -8,23 +6,4 @@
   --tablet: #{breakpoints.$tablet};
   --desktop: #{breakpoints.$desktop};
   --full-hd: #{breakpoints.$full-hd};
-
-  // Контейнер
-  --container-width: #{layout.$container-width};
-  --container-padding-x: #{layout.$container-padding-x};
-
-  // Типографика
-  --font-size-min: #{typography.$font-size-min};
-  --font-size-max: #{typography.$font-size-max};
-  --heading1-min: #{typography.$heading1-min};
-  --heading1-max: #{typography.$heading1-max};
-  --heading2-min: #{typography.$heading2-min};
-  --heading2-max: #{typography.$heading2-max};
-  --heading3-min: #{typography.$heading3-min};
-  --heading3-max: #{typography.$heading3-max};
-  --heading4-min: #{typography.$heading4-min};
-  --heading4-max: #{typography.$heading4-max};
-
-  // header__actions
-  --header-actions-gap: 2px;
 }
