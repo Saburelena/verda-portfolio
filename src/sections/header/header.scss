@@ -53,7 +53,8 @@
 
 .header {
   background-color: variables.$header-background;
-  border-bottom: 1px solid variables.$color-border-alpha;
+  backdrop-filter: blur(40px);
+  border-bottom: 0.4px solid variables.$color-border-header;
 
   &__inner {
     @include mixins.layout-header(24px);
@@ -193,7 +194,7 @@
 
   &__mobile-divider {
     height: 1px;
-    background-color: variables.$color-border-alpha;
+    background-color: variables.$color-border-mobile-divider;
     margin: 40px 0;
   }
 
@@ -202,7 +203,7 @@
     @include _header-signin-shared;
 
     line-height: variables.$nav-line-height-desktop-default;
-    border: 1px solid variables.$color-border-alpha;
+    border: 1px solid variables.$color-border-mobile-divider;
     border-radius: variables.$border-radius-large;
   }
 }
