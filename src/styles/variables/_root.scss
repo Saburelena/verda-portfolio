@@ -6,4 +6,7 @@
   --tablet: #{breakpoints.$tablet};
   --desktop: #{breakpoints.$desktop};
   --full-hd: #{breakpoints.$full-hd};
+
+  //Debug-режим
+   --debug: none; /* ← заменить на "1px solid #f008" для отладки */
 }

@@ -1,0 +1,13 @@
+# <тип>: краткое описание на английском
+#
+# Типы: feat, fix, docs, style, refactor, perf, test, chore
+#
+# Примеры:
+# feat: add cart button animation
+# fix: resolve mobile menu overflow
+# docs: update WEBSTORM_SHORTCUTS.md
+#
+# Подробное описание (опционально):
+# - что изменено
+# - зачем
+# - как проверить

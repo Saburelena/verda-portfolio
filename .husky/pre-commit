@@ -1,2 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if ! git diff --cached --quiet; then
+  echo "Running linters..."
+else
+  echo "No changes staged. Aborting commit."
+  exit 1
+fi
+
 npx stylelint "src/**/*.scss"
 npx htmlhint "src/**/*.html"

@@ -10,7 +10,7 @@
 
 // Убираем внутренние отступы слева тегам списков, у которых есть атрибут class
 :where(ul, ol):where([class]) {
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 // Убираем стандартный отступ браузера
@@ -35,7 +35,7 @@ body {
 }
 
 :where(dd[class]) {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 :where(fieldset[class]) {

@@ -20,10 +20,10 @@ body {
   background-color: variables.$color-body;
 }
 
-/* FLUID ЗАГОЛОВКИ */
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   font-weight: variables.$font-weight-medium;
+  text-wrap: balance;
 }
 
 h1, .h1 {
@@ -62,10 +62,9 @@ h4, .h4 {
   );
 }
 
-
 /* БАЗОВЫЕ СТИЛИ ТЕКСТА */
 p {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   line-height: 1.6;
 }
 
@@ -84,5 +83,15 @@ textarea,
 svg * {
   transition: variables.$transition-duration variables.$transition-timing-standard;
 }
+
+  /* DEBUG - раскомментировать для отладки*/
+/*
+* {
+   outline: var(--debug);
+ }
+ */
+
+
+
 
 
